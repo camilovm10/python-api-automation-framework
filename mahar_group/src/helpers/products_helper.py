@@ -11,3 +11,6 @@ class ProductsHelper:
 
     def get_product_by_id(self, product_id):
         return self.req_utility.get(endpoint=f"products/{product_id}", expected_status_code=200)
+
+    def create_product(self, payload):
+        return self.req_utility.post(endpoint="products", payload=payload, expected_status_code=201)
