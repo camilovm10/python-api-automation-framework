@@ -5,5 +5,6 @@ export DB_USER=root
 export DB_PASSWORD=root
 export DB_PORT=8889
 export DB_HOST=127.0.0.1
+export MACHINE=machine1
 
 export PYTHONPATH=. pytest

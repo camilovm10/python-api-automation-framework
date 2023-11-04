@@ -4,6 +4,7 @@ from mahar_group.src.utilities.generic_utilities import generate_random_string
 from mahar_group.src.helpers.products_helper import ProductsHelper
 from mahar_group.src.dao.products_dao import ProductsDAO
 
+pytestmark = [pytest.mark.products]
 
 @pytest.mark.tcid26
 def test_create_simple_product():

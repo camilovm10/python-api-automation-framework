@@ -5,7 +5,7 @@ from mahar_group.src.utilities.requests_utility import RequestsUtility
 class CustomersHelper:
 
     def __init__(self):
-        self.requests_utility = RequestsUtility()
+        self._requests_utility = RequestsUtility()
 
     def create_customer(self, email=None, password=None, **kwargs):
 
@@ -19,10 +19,10 @@ class CustomersHelper:
         payload['password'] = password
         payload.update(kwargs)
 
-        craete_user_json = self.requests_utility.post('customers', payload=payload,
-                                                      expected_status_code=201)
+        craete_user_json = self._requests_utility.post('customers', payload=payload,
+                                                       expected_status_code=201)
 
         return craete_user_json
 
     def get_all_customers(self):
-        return self.requests_utility.get('customers')
+        return self._requests_utility.get('customers')

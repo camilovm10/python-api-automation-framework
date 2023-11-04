@@ -3,9 +3,6 @@ import os
 
 class CredentialsUtility:
 
-    def __init__(self):
-        pass
-
     @staticmethod
     def get_wc_api_keys():
 

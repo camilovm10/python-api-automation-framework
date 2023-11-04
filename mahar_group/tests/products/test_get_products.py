@@ -4,8 +4,8 @@ import logging as log
 from mahar_group.src.dao.products_dao import ProductsDAO
 from mahar_group.src.helpers.products_helper import ProductsHelper
 
+pytestmark = [pytest.mark.products]
 
-@pytest.mark.products
 @pytest.mark.tcid24
 def test_get_all_products():
 
@@ -16,7 +16,6 @@ def test_get_all_products():
     assert len(list(rs_api)) > 0, f"API call for products list is empty"
 
 
-@pytest.mark.products
 @pytest.mark.tcid25
 def test_get_random_product():
 
